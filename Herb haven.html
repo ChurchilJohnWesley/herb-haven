@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herb Haven</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('herbSearch').addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                document.querySelectorAll('.Herb-card').forEach(card => {
+                    const herbName = card.querySelector('h3').textContent.toLowerCase();
+                    card.style.display = herbName.includes(query) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+<body style="text-align: center;">
+    <header>
+      <h1>Herb Haven </h1>
+      <nav>
+        <ul>
+            <li><a href="Herb haven.html">Home </a></li>
+            <li><a href="About.html">About </a></li>
+            <li><a href="Herbs.html">Herbs </a></li>
+            <li><a href="#Contact"> Contact </a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="Home">
+        <h2>Welcome To Herb Haven</h2>
+        <p>Your Trusted Guide to Medicinal And Culinary Herbs. Learn, Explore and Grow </p>
+
+    </section>
+    
+    <section id="#Herbs">
+        <h2>Popular Herbs </h2>
+        <input type="text" id="herbSearch" placeholder="Search herbs..." style="margin-bottom:20px; padding:8px; width:220px; border-radius:8px; border:1px solid #ccc;">
+        <div class="Herb-list">
+ <footer>
+                         <p>&copy; 2025 Herb Haven. All rights reserved.</p>
+           
+                    
+</body>
+</html>
